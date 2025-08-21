@@ -30,9 +30,5 @@ jobs:
       #     node-version: 20
 
       - name: Run Snyk Code test
-        run: snyk code test --sarif > snyk-code.sarif || true
+        run: snyk code test
 
-      - name: Upload Snyk Code results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: snyk-code.sarif
