@@ -2,6 +2,7 @@ import subprocess
 import optparse
 import re
 
+passwd = "BeSecureWithRio"
 
 def get_mac(interface):
     ifconfig_output =subprocess.check_output(["ifconfig",interface], text=True)
